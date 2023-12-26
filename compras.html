@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Moda Online">
+    <title>Ponto Rosa - Loja de roupa online</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="https://www.pontorosa.pt/mini.png">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="compras.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-success fixed-top">
+        <!-- Adicionei a classe fixed-top -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="compras.html" style="color: black;">GreenRush</a> <!-- Adicionei style="color: black;" para o texto em preto -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="perfilutilizador.html" style="color: black;">Perfil</a> <!-- Adicionei style="color: black;" para o texto em preto -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="seguirpedido.html" style="color: black;">Seguir Pedido</a> <!-- Adicionei style="color: black;" para o texto em preto -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagamento.html" style="color: black;">Pagamento</a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formulario.html" style="color: black;">Avaliação</a> <!-- Adicionei style="color: black;" para o texto em preto -->
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="background-color: white; color: black; border: 1px solid #ced4da;"> <!-- Alterei a cor de fundo para branco -->
+                    <button class="btn btn-outline-dark" type="submit" style="color: white; border: 1px solid #6c757d;">Search</button> <!-- Alterei a cor do botão para um verde mais escuro -->
+                </form>
+            </div>
+        </div>
+    </nav>
+    <br />
+    <div class="container mt-4">
+        <form action="http://192.168.160.36/FormEcho.aspx">
+            <div class="row">
+                <div class="col-md-1 offset-6 text-right">
+                    <a style="color:green" href="pagamento.html">
+                        <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <div class="col-md-1 text-right">
+                    <span class="form-control" id="quantidades"
+                          title="Quantidade total de produtos">0</span>
+                </div>
+                <div class="col-md-2 text-right">
+                    <span class="form-control" id="total"
+                          title="Preço total da compra">0.00</span>
+                </div>
+                <div class="col-md-2 text-right">
+                    <button type="submit" onclick="return valid()" class="btn custom-btn"
+                            title="Enviar pedido">
+                        Enviar
+                    </button>
+                    <button type="button" onclick="clean()" class="btn btn-secondary" title="Limpar pedido">
+                        <i class="fa fa-trash-o"></i>
+                    </button>
+                </div>
+            </div>
+            <hr />
+            <h1 class="border-bottom my-3 py-3">Escolha o seu pedido!</h1>
+            <div class="row">
+                <div class="col-sm-4"><img height="200px" src="https://s2-techtudo.glbimg.com/rEYHQq74wBCQcBYUANy_fAuRKdE=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2020/R/8/GnGPa5Q4W0ZcfNmM0a7w/unnamed.jpg" /></div>
+                <div class="col-sm-4"><img height="200px" src="https://radionovaera.pt/media/upload/mbu-2ntapg4jhtk/small/68916429/kfc-passatempos.jpg" /></div>
+                <div class="col-sm-4"><img height="200px" src="https://newinoeiras.nit.pt/wp-content/uploads/2023/01/e965ed9e0aff205aebeb573f9de830a5.jpg" /></div>
+                <div class="col-sm-4">
+                    <input type="hidden" id="qty1" name="qty1" value="0" />
+                    <h5>Mcdonald´s<br /><small>fk58605</small></h5>
+                    <div class="text-danger text-right">
+                        <input id="price1" name="price1" value="9.99"
+                               class="text-danger text-right border-0" readonly> €
+                    </div>
+                    <button type="button" class="btn btn-block custom-btn" onclick="this.blur(); addProduct(1)">
+                        <i class="fa fa-shopping-bag"></i> Adicionar ao carrinho
+                    </button>
+                </div>
+                <div class="col-sm-4">
+                    <input type="hidden" id="qty2" name="qty2" value="0" />
+                    <h5>KFC<br /><small>fk58686</small></h5>
+                    <div class="text-danger text-right">
+                        <input id="price2" name="price2" value="10.99"
+                               class="text-danger text-right border-0" readonly> €
+                    </div>
+                    <button type="button" class="btn btn-block custom-btn" onclick="this.blur(); addProduct(2)">
+                        <i class="fa fa-shopping-bag"></i> Adicionar ao carrinho
+                    </button>
+                </div>
+                <div class="col-sm-4">
+                    <input type="hidden" id="qty3" name="qty3" value="0" />
+                    <h5>Amaya Sushi<br /><small>fk58692</small></h5>
+                    <div class="text-danger text-right">
+                        <input id="price3" name="price3" value="14.99"
+                               class="text-danger text-right border-0" readonly> €
+                    </div>
+                    <button type="button" class="btn btn-block custom-btn" onclick="this.blur(); addProduct(3)">
+                        <i class="fa fa-shopping-bag"></i> Adicionar ao carrinho
+                    </button>
+                </div>
+            </div>
+            <p>&nbsp;</p>
+            <div class="row">
+                <div class="col-sm-4"><img height="250px" src="https://ruralea.com/wp-content/uploads/2022/03/9c4888bb938346c3ada2cddd5d1a0ebc-min-scaled-e1647797257430.jpg" /></div>
+                <div class="col-sm-4"><img height="250px" src="https://anamariabraga.globo.com/wp-content/uploads/2020/08/pizza-margherita.jpg" /></div>
+                <div class="col-sm-4"><img height="250px" src="https://anoticia.pt/wp-content/uploads/2019/05/Gelados.gif" /></div>
+                <div class="col-sm-4">
+                    <input type="hidden" id="qty4" name="qty4" value="0" />
+                    <h5>Portugália<br /><small>fk58680</small></h5>
+                    <div class="text-danger text-right">
+                        <input id="price4" name="price4" value="8.99"
+                               class="text-danger text-right border-0" readonly> €
+                    </div>
+                    <button type="button" class="btn btn-block custom-btn" onclick="this.blur(); addProduct(4)">
+                        <i class="fa fa-shopping-bag"></i> Adicionar ao carrinho
+                    </button>
+                </div>
+                <div class="col-sm-4">
+                    <input type="hidden" id="qty5" name="qty5" value="0" />
+                    <h5>Pizzaria Volta<br /><small>fk58697</small></h5>
+                    <div class="text-danger text-right">
+                        <input id="price5" name="price5" value="10.99"
+                               class="text-danger text-right border-0" readonly> €
+                    </div>
+                    <button type="button" class="btn btn-block custom-btn" onclick="this.blur(); addProduct(5)">
+                        <i class="fa fa-shopping-bag"></i> Adicionar ao carrinho
+                    </button>
+                </div>
+                <div class="col-sm-4">
+                    <input type="hidden" id="qty6" name="qty6" value="0" />
+                    <h5>Gelataria<br /><small>fk58695</small></h5>
+                    <div class="text-danger text-right">
+                        <input id="price6" name="price6" value="2.50"
+                               class="text-danger text-right border-0" readonly> €
+                    </div>
+                    <button type="button" class="btn btn-block custom-btn" onclick="this.blur(); addProduct(6)">
+                        <i class="fa fa-shopping-bag"></i> Adicionar ao carrinho
+                    </button>
+                </div>
+            </div>
+        </form>
+        <hr />
+        <p class="navbar-text small d-none d-md-block">
+            Selecione aqui os produtos que deseja encomendar!
+        </p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="compras.js"></script>
+</body>
+</html>

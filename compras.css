@@ -1,0 +1,105 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.carousel .carousel-item {
+    height: 500px;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 500px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 56px 0 56px 0;
+}
+
+/* button default
+---------------------------- */
+.btn-default {
+    color: #333;
+    background-color: #f8f9fa;
+    border-color: #ccc;
+}
+
+    .btn-default:focus {
+        color: #333;
+        background-color: #e6e6e6;
+        border-color: #8c8c8c;
+    }
+
+    .btn-default:active,
+    .btn-default:hover {
+        color: #333;
+        background-color: #e6e6e6;
+        border-color: #adadad;
+    }
+
+/* button-xs
+---------------------------- */
+.btn-group-xs > .btn, .btn-xs {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+li.page-item a {
+    font-size: 0.85rem;
+}
+
+
+.bluenav {
+    background-color: rgb(29, 67, 140);
+}
+
+.rednav {
+    background-color: rgb(203, 15, 40);
+}
+
+.navbar-nav, .pagination {
+    background-color: transparent;
+    border: 0px;
+    width: auto;
+}
+
+.sidetext {
+    border-radius: 25px;
+    background: #b5b5b5;
+    padding: 20px;
+}
+
+.redes_sociais {
+    margin: 20px 5px 20px 5px;
+    height: 48px;
+    width: 48px;
+}
+
+ul {
+    list-style-type: none;
+    background-color: white;
+    text-align: left;
+    border: 1px solid black;
+    width: 10%;
+    padding: 0px 2px 0px 2px;
+}
+
+.custom-btn {
+    background-color: green;
+    color: white; /* Define a cor do texto para branco para garantir boa legibilidade */
+    /* Adicione outros estilos desejados, se necessário */
+}
+
+/* Se você deseja estilizar o botão de pesquisa também, adicione a classe personalizada ao botão de pesquisa */
+.form-control.btn-outline-dark.custom-btn {
+    background-color: darkgreen;
+    color: white;
+    border-color: darkgreen;
+}

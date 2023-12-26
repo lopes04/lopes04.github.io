@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Seguir Pedido</title>
+    <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/3.0.0/Control.FullScreen.css" integrity="sha512-Wm5w05vDvZK7tOIICMiJMnvltfzTvmHFWmBhIQ4Wx4MutP9paMzZmEmH6DlxSuemaOhu8DcOE8TehdBhnz1mkQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../lib/font-awesome/dist/css/font-awesome.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/3.0.0/Control.FullScreen.css" integrity="sha512-Wm5w05vDvZK7tOIICMiJMnvltfzTvmHFWmBhIQ4Wx4MutP9paMzZmEmH6DlxSuemaOhu8DcOE8TehdBhnz1mkQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .follow-order, .order-details {
+            margin-top: 20px;
+            background-color: #28a745; /* Cor verde de fundo */
+            color: #fff; /* Cor do texto branco */
+            padding: 10px; /* Espaçamento interno */
+            border-radius: 5px; /* Borda arredondada */
+        }
+
+        #map {
+            height: 480px;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-success fixed-top">
+        <!-- Adicionei a classe fixed-top -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="compras.html" style="color: black;">GreenRush</a> <!-- Adicionei style="color: black;" para o texto em preto -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="perfilutilizador.html" style="color: black;">Perfil</a> <!-- Adicionei style="color: black;" para o texto em preto -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="seguirpedido.html" style="color: black;">Seguir Pedido</a> <!-- Adicionei style="color: black;" para o texto em preto -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagamento.html" style="color: black;">Pagamento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formulario.html" style="color: black;">Avaliação</a> <!-- Adicionei style="color: black;" para o texto em preto -->
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="background-color: white; color: black; border: 1px solid #ced4da;"> <!-- Alterei a cor de fundo para branco -->
+                    <button class="btn btn-outline-dark" type="submit" style="color: white; border: 1px solid #6c757d;">Search</button> <!-- Alterei a cor do botão para um verde mais escuro -->
+                </form>
+            </div>
+        </div>
+    </nav>
+    <br />
+    <div class="container">
+        <div class="follow-order">
+            <h4>Seguir Pedido</h4>
+        </div>
+
+        <div id="map"></div>
+
+        <div class="order-details">
+            <p>Tempo estimado: 2 min</p>
+            <p>Distância: 700m</p>
+        </div>
+    </div>
+
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/3.0.0/Control.FullScreen.min.js" integrity="sha512-JiHf9V6kymhGW5Uxe+uXX36Kt8qeGUi7vk7enJEpPgmklms70plfP7xLqoC+e9n74/n+Z49PRNf67tBDUFz/ng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="seguirpedido.js"></script>
+
+</body>
+</html>
+
+
+
